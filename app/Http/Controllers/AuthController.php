@@ -20,7 +20,7 @@ class AuthController extends Controller
         $credentials = ['email' => $request->email, 'password' => $request->password];
         if(Auth::attempt($credentials, $request?->remember)){
             $user = Auth::user();
-            return redirect()->route('welcome')->with('user', $user);
+            return redirect()->route('landing')->with('user', $user);
         }else{
             return redirect()->back()->withErrors(['error' => 'Credenciales incorrectas']);
         }
@@ -46,7 +46,7 @@ class AuthController extends Controller
             'phone' => $request->phone
         ]);
         Auth::login($user);
-        return redirect()->route('welcome');
+        return redirect()->route('landing');
     }
 
     public function logout(){
