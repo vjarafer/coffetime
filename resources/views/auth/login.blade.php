@@ -4,6 +4,7 @@
     <form action="{{ route('login.attempt') }}" method="POST">
         @csrf
         <div class="container">
+            
             <div class="row justify-content-center">
                 <div class="col-lg-5">
                     <div class="card border-0 rounded-lg mt-5">
@@ -43,6 +44,7 @@
                         </div>
                         <div class="card-footer text-center py-3 bg-light">
                             <div class="fs-6"><a href="{{ route('register') }}">Crear una cuenta</a></div>
+                            <br/>
                         </div>
                     </div>
                 </div>

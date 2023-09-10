@@ -4,6 +4,7 @@
     <form action="{{ route('register.store') }}" method="post">
         @csrf
         <div class="container">
+            
             <div class="row justify-content-center">
                 <div class="col-lg-5">
                     <div class="card border-0 rounded-lg mt-5">
